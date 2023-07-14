@@ -3,14 +3,15 @@ const app = express()
 const bodyP = require("body-parser")
 const compiler = require("compilex")
 const options = { stats: true }
+const currentWorkingDirectory = process.cwd();
 compiler.init(options)
 app.use(bodyP.json())
-app.use("/codemirror-5.65.13", express.static("C:/Users/risha/OneDrive/Desktop/code editor/codemirror-5.65.13"))
+app.use("/codemirror-5.65.13", express.static(`${currentWorkingDirectory}/codemirror-5.65.13`))
 app.get("/", function (req, res) {
     compiler.flush(function () {
         console.log("deleted")
     })
-    res.sendFile("C:/Users/risha/OneDrive/Desktop/code editor/index.html")
+    res.sendFile(`${currentWorkingDirectory}/index.html`)
 })
 app.post("/compile", function (req, res) {
     var code = req.body.code
