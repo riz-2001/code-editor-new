@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>code editor</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -21,7 +22,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body class="bg-dark">
+
     <div class="row m-3">
         <div class="col">
             <div class="d-flex justify-content-between mb-2 bg-dark rounded p-2">
@@ -29,14 +31,14 @@
                     <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                     <select class="form-select" id="inlineFormSelectPref">
                         <option selected>Choose...</option>
+                        <option value="Python">Python</option>
                         <option value="Java">Java</option>
                         <option value="C++">C++</option>
-                        <option value="Python">Python</option>
                     </select>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-success">Coding Sprint</button>
-                    <button type="button" id="run" class="btn btn-success"><i class="bi bi-play-fill"></i></button>
+                    <button type="button" class="btn btn-warning">online compiler</button>
+                    <button type="button" id="run" class="btn btn-warning"><i class="bi bi-play-fill"></i></button>
                 </div>
             </div>
             <textarea type="text" id="editor" class="form-control" aria-label="First name"></textarea>
